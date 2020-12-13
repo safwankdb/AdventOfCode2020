@@ -1,13 +1,14 @@
-# Advent of Code
+# Advent of Code 2020
+Solutions for [Advent of Code](https://adventofcode.com/)2020 in Python.
 
-## Q1
-SImple hash table.
+## Q10
+Simple hash table.
 
 ## Q10
 Apply depth first search.
 ```
 def dfs(u, t):
-    if u == t:
+	if u == t:
 		return 1
 	if not u.npaths:
 		u.npaths = sum(dfs(c, t) for c in u.children)
@@ -15,4 +16,4 @@ def dfs(u, t):
 ```
 
 ## Q13
-Notice that all numbers are prime, se Chinese Remaider Theorem. [CRT implementation](https://www.geeksforgeeks.org/using-chinese-remainder-theorem-combine-modular-equations/) from geeksforgeeks.
+Notice that all numbers are prime, use Chinese Remaider Theorem. [CRT implementation](https://www.geeksforgeeks.org/using-chinese-remainder-theorem-combine-modular-equations/) from geeksforgeeks.

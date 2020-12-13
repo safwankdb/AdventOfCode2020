@@ -63,3 +63,30 @@ for command in data:
     mag = int(command[1:].strip())
     pos, theta = transform[dirn](pos, theta, mag)
 print(round(abs(pos[0]) + abs(pos[1])))
+
+## Part 2
+
+pos = np.array([0.0, 0.0])
+waypoint = np.array([10.0, 1.0])
+for command in data:
+    dirn = command[0]
+    mag = int(command[1:].strip())
+    if dirn == "N":
+        waypoint += [0, mag]
+    elif dirn == "S":
+        waypoint -= [0, mag]
+    elif dirn == "E":
+        waypoint += [mag, 0]
+    elif dirn == "W":
+        waypoint -= [mag, 0]
+    elif dirn == "F":
+        pos += waypoint * mag
+    elif dirn == "R":
+        x = waypoint
+        x = Affine().rotate(-mag) * x[None, :]
+        waypoint = x[0]
+    elif dirn == "L":
+        x = waypoint
+        x = Affine().rotate(mag) * x[None, :]
+        waypoint = x[0]
+print(round(abs(pos[0]) + abs(pos[1])))
