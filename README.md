@@ -1,8 +1,17 @@
 # Advent of Code 2020
 Solutions for [Advent of Code](https://adventofcode.com/) 2020 in Python.
 
-## Q10
+## Q1
 Simple hash table.
+
+## Q2
+Use ```parse``` library for parsing string in specific format.
+
+## Q6
+Used ```set()``` is python for union and intersection.
+
+## Q8
+Parse instruction, simulate, maintain hash table to check for loops.
 
 ## Q10
 Apply depth first search.
